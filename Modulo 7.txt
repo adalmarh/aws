@@ -1,0 +1,81 @@
+seguridad yo
+
+Propósito del módulo
+
+En este módulo, obtendrá una descripción general de la seguridad en la nube en relación con AWS Identity and Access Management (IAM). Esto incluye información sobre mejores prácticas, roles, usuarios, políticas y grupos de seguridad.
+
+Descripción del módulo
+
+Las actividades de este módulo le permitirán tomar notas sobre la información presentada y recopilada. También tendrá una discusión o un juego de roles sobre los impactos sociales de la seguridad en la nube. Determinarás el proceso para resolver la vulnerabilidad en un servidor web.
+
+Terminología tecnológica
+
+Para obtener más información sobre la terminología tecnológica utilizada en este módulo, amplíe cada una de las siguientes doce categorías.
+
+Gestión de acceso e identidad de AWS (IAM)
+–
+Implica la aplicación de controles a los usuarios que necesitan acceso a recursos informáticos.
+
+Role
+–
+Una identidad de IAM que puede crear en su cuenta y que tiene permisos específicos.
+
+Usuario
+–
+Una entidad que crea en Amazon Web Services (AWS) para representar a la persona o aplicación que la utiliza para interactuar con AWS. Un usuario en AWS consta de un nombre y credenciales.
+
+grupo de seguridad
+–
+Un grupo de seguridad actúa como un firewall virtual para que su instancia controle el tráfico entrante y saliente.
+
+Política
+–
+Un objeto en AWS que, cuando se asocia con una identidad o un recurso, define sus permisos. AWS evalúa estas políticas cuando una entidad principal (usuario o rol) realiza una solicitud.
+
+Inspector de Amazon
+–
+Ayuda a los clientes a identificar vulnerabilidades de seguridad y desviaciones de las mejores prácticas de seguridad en las aplicaciones, antes de implementarlas y mientras se ejecutan en un entorno de producción.
+
+Grupo
+–
+Un grupo de IAM es una colección de usuarios de IAM. Los grupos le permiten especificar permisos para varios usuarios, lo que puede facilitar la administración de los permisos para esos usuarios.
+
+Usuario raíz
+–
+Cuando crea una cuenta de AWS por primera vez, comienza con una identidad de inicio de sesión única que tiene acceso completo a todos los servicios y recursos de AWS en la cuenta.
+
+Credencial
+–
+Las credenciales de seguridad de AWS verifican quién es usted y si tiene permiso para acceder a los recursos que solicita.
+
+Habilitar la autenticación multifactor (MFA)
+–
+Este enfoque de autenticación requiere que se autentiquen dos o más datos independientes.
+
+Notación de objetos JavaScript (JSON)
+–
+Una sintaxis para almacenar e intercambiar datos.
+
+Autenticación multifactor (MFA)
+–
+Un sistema de seguridad que requiere más de un método de autenticación de categorías independientes de credenciales para verificar la identidad del usuario para un inicio de sesión u otra transacción.
+
+Antecedentes y conceptos erróneos
+
+La seguridad es esencial cuando se utilizan recursos de la nube para procesar y almacenar datos. Debido a que las bases de datos, los sitios web y las aplicaciones en la nube pueden procesar información confidencial, como registros médicos y bancarios, estos recursos en la nube deben restringir quién puede acceder a ellos y qué privilegios tienen al hacerlo.
+
+IAM implica la aplicación de controles a los usuarios que necesitan acceso a recursos informáticos. La cuenta de AWS de una empresa puede tener servicios administrados por docenas de personas diferentes que podrían estar en diferentes departamentos u oficinas, tener diferentes responsabilidades o niveles de antigüedad e incluso estar en diferentes países. Para mantener un entorno de nube seguro con todas estas variables en juego, es fundamental mantener las mejores prácticas para IAM. Para revisar las mejores prácticas, consulte Mejores prácticas de seguridad en IAM (se abre en una nueva pestaña) en la Guía del usuario de AWS Identity and Access Management.
+
+Identidades de AWS
+
+Cuando se piensa en IAM en AWS, existen roles, identidades y grupos, todos los cuales se rigen por políticas.
+
+En el nivel más alto está el usuario root. Esta es la identidad que creó la cuenta de AWS. El usuario raíz tiene acceso a todos los aspectos de AWS y actúa como administrador universal. Las credenciales del usuario root nunca deben divulgarse y ni siquiera se recomienda que el creador de la cuenta realice las tareas cotidianas como usuario root. En su lugar, se debe utilizar la cuenta de usuario raíz para crear una cuenta de administrador. Solo se deben realizar algunas tareas como usuario raíz, como cambiar el plan de soporte de AWS o cerrar una cuenta.
+
+Un usuario de IAM es una entidad creada en AWS. Representa a la persona que utiliza los servicios de AWS y les brinda la posibilidad de iniciar sesión en AWS. A un usuario se le asignará un nombre y una contraseña para acceder a la consola de AWS. Al crear un usuario, se considera una buena práctica asignarlo a un grupo que tenga la política de permisos adecuada.
+
+Un grupo es una colección de usuarios de IAM. Puede utilizar grupos para especificar permisos para una colección de usuarios, lo que puede hacer que esos permisos sean más fáciles de administrar para esos usuarios. Por ejemplo, podría tener un grupo llamado Administradores y darle a ese grupo los tipos de permisos que los administradores normalmente necesitan. Cualquier usuario de ese grupo tiene automáticamente los permisos asignados al grupo. Si un nuevo usuario se une a su organización y necesita privilegios de administrador, puede asignar los permisos adecuados agregando el usuario a ese grupo. De manera similar, si una persona cambia de trabajo en su organización, en lugar de editar los permisos de ese usuario, puede eliminarlo de los grupos antiguos y agregarlo a los grupos nuevos apropiados.
+
+Los roles de IAM son similares a los usuarios en el sentido de que son identidades con políticas de permisos que determinan lo que la identidad puede y no puede hacer en AWS. Sin embargo, una función no tiene ninguna credencial (contraseña o claves de acceso) asociada. En lugar de estar asociado únicamente con una persona, un rol debe ser asumido por cualquiera que lo necesite. Un usuario de IAM puede asumir un rol para asumir temporalmente diferentes permisos para una tarea específica. Los roles son útiles en casos en los que una aplicación móvil accede a sus datos de AWS. No desea que todas las personas que usan esa aplicación tengan credenciales para su cuenta de AWS, pero sí necesitan cierto acceso a los datos cuando usan la aplicación. Al asignar un rol cuando el usuario inicia sesión, se le otorga acceso temporal con algunos permisos, pero no credenciales permanentes.
+
+Anteriormente, se mencionó una política asociada con los permisos que se le pueden asignar a un grupo. Una política, cuando se adjunta a un usuario, rol o grupo, define sus permisos. Las políticas se almacenan en AWS como documentos JSON. Es una buena práctica asignar políticas a grupos y luego asignar cada usuario y función a un grupo cuando se crea. De esta manera, puede eliminar o cambiar permisos rápidamente sin tener que modificar cada usuario o rol individual.

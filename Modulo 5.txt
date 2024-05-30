@@ -1,0 +1,50 @@
+Módulo 5: Entrega de contenido
+Propósito del módulo
+
+El propósito de este módulo es aprender sobre la red de entrega de contenido (CDN) de Amazon Web Services (AWS), Amazon CloudFront. Aprenderá vocabulario clave relacionado con la entrega de contenido y comprenderá por qué es importante tener una CDN.
+
+Descripción del módulo
+
+En este módulo, analizaremos la importancia de las ubicaciones de borde y el almacenamiento en caché para una CDN. Luego, creará una distribución de CloudFront y la adjuntará a un depósito de Amazon Simple Storage Service (Amazon S3) que contiene un archivo de sitio web de lenguaje de marcado de hipertexto (HTML).
+
+Terminología tecnológica
+
+Para obtener más información sobre la terminología tecnológica utilizada en este módulo, amplíe cada una de las siguientes siete categorías.
+
+Amazon CloudFront
+–
+Un servicio rápido de red de entrega de contenido (CDN) que entrega de forma segura datos, videos, aplicaciones e interfaces de programación de aplicaciones (API) a clientes de todo el mundo con baja latencia y altas velocidades de transferencia, todo dentro de un entorno amigable para los desarrolladores.
+
+Conexión directa de AWS
+–
+Direct Connect es una solución de servicio en la nube que brinda la capacidad de establecer una conexión de red dedicada desde su entorno local a AWS. Con Direct Connect, puede establecer una conectividad privada entre AWS y su centro de datos, oficina o entorno de colocación, lo que en muchos casos puede reducir los costos de su red, aumentar el rendimiento del ancho de banda y brindar una experiencia de red más consistente que las conexiones basadas en Internet.
+
+Almacenamiento en caché
+–
+Almacenar los datos solicitados con frecuencia en ubicaciones de borde para que se pueda acceder a ellos más rápidamente.
+
+Red de entrega de contenidos (CDN)
+–
+Un sistema de servidores distribuidos (red) que entrega páginas y otro contenido web a un usuario, según las ubicaciones geográficas del usuario, el origen de la página web y el servidor de entrega de contenido.
+
+Distribución
+–
+Indica a CloudFront dónde obtener la información que almacena en caché en las ubicaciones de borde y cómo realizar un seguimiento y administrar la entrega de contenido.
+
+Ubicación del borde
+–
+Un sitio donde se pueden almacenar datos para una menor latencia. A menudo, las ubicaciones periféricas estarán cerca de áreas de alta población que generarán grandes volúmenes de tráfico.
+
+Origen
+–
+Un tipo complejo que describe el depósito de Amazon S3, el servidor del Protocolo de transferencia de hipertexto (HTTP) (por ejemplo, un servidor web) u otro servidor del que CloudFront obtiene sus archivos.
+
+Antecedentes y conceptos erróneos
+
+Debido a la naturaleza de la web, ciertos contenidos se solicitan con más frecuencia y se espera que se entreguen casi instantáneamente. Un sitio web cuyo origen esté en un servidor de California podría albergar algo que se vuelva viral en Suecia. En este caso, habrá una repentina avalancha de solicitudes de esos datos, lo que podría provocar un aumento de la latencia e incluso bloquear el sitio web si el servidor no puede manejar el tráfico.
+
+CloudFront trabaja con las ubicaciones de borde que forman parte de la infraestructura global de AWS. Juntos, facilitan que los datos solicitados con frecuencia se almacenen en caché en las ubicaciones de borde. Si bien la solicitud inicial solicita a CloudFront que cargue el archivo en la caché, las solicitudes posteriores se pueden cumplir mucho más rápidamente y parte del trabajo se puede descargar desde el servidor de origen.
+
+Este proceso también se puede ver a un nivel más local en algo como la página principal de Amazon.com. Los productos que se muestran en la página principal se pueden almacenar en caché porque cada persona que visita el sitio Amazon.com solicitará automáticamente esos productos al servidor, lo que podría provocar una ralentización. El almacenamiento en caché permite que estos productos de la página principal se almacenen en ubicaciones perimetrales para un acceso más rápido. El resto de productos pueden permanecer almacenados en el servidor de origen porque se solicitarán con menos frecuencia y pueden tolerar una latencia ligeramente mayor.
+
+El almacenamiento en caché en ubicaciones de borde no es permanente y todos los datos almacenados en caché tienen un tiempo de vida (TTL), que es el período de tiempo durante el cual se almacenan en caché.

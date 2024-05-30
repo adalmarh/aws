@@ -1,0 +1,98 @@
+Bases de datos
+
+Propósito del módulo
+
+En este módulo, aprenderá sobre Amazon Relational Database Service (Amazon RDS), Amazon DynamoDB y el almacenamiento de datos con Amazon Redshift. También comparará bases de datos relacionales y no relacionales y el procesamiento de transacciones en línea (OLTP) y el procesamiento analítico en línea (OLAP).
+
+Descripción del módulo
+
+En este módulo, recomendará una base de datos relacional o no relacional según un escenario determinado. Creará una instancia de base de datos RDS. También aprenderá y discutirá el uso apropiado de los sistemas de bases de datos relacionales y no relacionales.
+
+Terminología tecnológica
+
+Para obtener más información sobre la terminología tecnológica utilizada en este módulo, amplíe cada una de las siguientes nueve categorías.
+
+Base de datos relacional
+–
+Una colección de conjuntos de datos organizados como registros y columnas en tablas. En un sistema de base de datos relacional, las relaciones se definen entre las tablas de la base de datos. Piense en una base de datos relacional como un conjunto de datos con relaciones de 1 a 1 y de 1 a muchos. Por ejemplo, una base de datos de clientes asociaría a cada cliente con un identificador que lo identifique de forma única. Los desarrolladores utilizan un lenguaje de consulta estructurado (SQL) para interactuar con la base de datos.
+
+
+Servicio de base de datos relacional de Amazon (Amazon RDS)
+–
+Amazon RDS permite a los desarrolladores crear y administrar bases de datos relacionales en la nube. Amazon RDS permite a los desarrolladores rastrear grandes cantidades de datos y organizarlos y buscarlos de manera eficiente.
+
+AmazonDynamoDB
+–
+El servicio de base de datos no relacional de AWS. Los datos se almacenan en pares clave-valor.
+
+Base de datos no relacional
+–
+También se llama base de datos "NoSQL" o "No sólo SQL". Cada entrada se almacena en un par clave-valor en el que cada clave está adjunta a valores. Cada entrada puede tener un número diferente de valores adjuntos a una clave.
+
+Desplazamiento al rojo del Amazonas
+–
+El servicio de almacenamiento de datos de AWS que puede almacenar cantidades masivas de datos de una manera que agiliza las consultas con fines de inteligencia empresarial (BI).
+
+Procesamiento de transacciones en línea (OLTP)
+–
+Una categoría de procesamiento de datos que se centra en tareas orientadas a transacciones. OLTP normalmente implica insertar, actualizar o eliminar pequeñas cantidades de datos en una base de datos.
+
+
+Procesamiento analítico en línea (OLAP)
+–
+Un método informático que permite a los usuarios extraer y consultar datos de forma eficiente y selectiva para analizarlos desde diferentes puntos de vista.
+
+auroras amazónicas
+–
+Un motor de base de datos relacional compatible con MySQL y PostgreSQL, creado para la nube, que combina el rendimiento y la disponibilidad de las bases de datos empresariales tradicionales con la simplicidad y rentabilidad de las bases de datos de código abierto.
+
+mysql
+–
+Un sistema de gestión de bases de datos relacionales de código abierto.
+
+Antecedentes y conceptos erróneos
+
+OLTP y OLAP
+
+Hay muchos tipos diferentes de bases de datos disponibles. Para decidir qué tipo de base de datos necesita, es importante saber cómo se procesarán los datos. Hay dos tipos de procesamiento de datos: procesamiento de transacciones en línea (OLTP) y procesamiento analítico en línea (OLAP).
+
+Las operaciones OLAP son principalmente de sólo lectura; es decir, leen los datos y realizan varios tipos de agregación, como suma, grupo y clasificación. Los sistemas de gestión de bases de datos relacionales tienen funciones integradas para realizar este tipo de operaciones. Como están integrados, se realizan de manera eficiente. En una base de datos no relacional, los valores deben extraerse de los pares clave-valor, lo que puede ser un proceso que requiere mucho tiempo.
+
+Los sistemas OLAP se utilizan a menudo cuando se requiere que el sistema procese una gran cantidad de datos relacionados, tal vez para generar informes comerciales. Las empresas a menudo necesitan analizar muchos puntos de datos que han ocurrido durante un largo período de tiempo para determinar tendencias y predecir comportamientos.
+
+Este tipo de sistema no necesariamente tiene que ser un sistema en tiempo real; puede ejecutarse como un proceso en segundo plano. Por ejemplo, en un sistema de comercio electrónico, un sistema OLAP podría ejecutarse en segundo plano sin afectar la experiencia del usuario. Hoy en día, es más común ver bases de datos relacionales (especialmente almacenes de datos en columnas de gran escala) en lugar de bases de datos no relacionales utilizadas para OLAP.
+
+Sin embargo, las operaciones OLTP necesitan actualizar la base de datos además de leerla. La actualización puede implicar agregar, cambiar o eliminar valores. La actualización puede resultar compleja porque muchas de las tablas de una base de datos relacional son virtuales. Es decir, las tablas deben combinarse en tiempo real a partir de tablas no virtuales. Considere el siguiente ejemplo.
+
+La base de datos de una tienda departamental tiene tablas que contienen información sobre clientes y productos. La tabla de clientes tiene datos relacionados únicamente con los clientes, como el nombre y la dirección. La tabla de productos tiene datos relacionados únicamente con productos como nombre y precio. Para registrar información sobre compras, se debe crear una tabla de compras que tenga una clave primaria combinada que incluya tanto el ID del cliente como el ID del producto, mostrando qué cantidad de un determinado producto compró un cliente en particular.
+
+Para mostrar una lectura completa de la compra, la tabla de clientes y la tabla de productos deben combinarse en tiempo real con la tabla de compras para mostrar cosas como el nombre del cliente, el nombre del producto, la cantidad del producto que se compró y el costo del producto. venta. El tipo de operación que combina tablas en tiempo real se llama JOIN. El resultado de un JOIN es una tabla virtual y, en la mayoría de los casos, no se puede actualizar directamente.
+
+Los sistemas OLTP se utilizan a menudo cuando se requiere que el sistema maneje grandes volúmenes de transacciones a un ritmo elevado. Muchos sistemas de comercio electrónico, como los carritos de compras, venden una gran cantidad de artículos durante el proceso de pago y al mismo tiempo eliminan los artículos de la tabla de inventario. Cuando la integridad de toda la transacción es crítica y cuando el procesamiento debe realizarse casi en tiempo real, las empresas deberían considerar los sistemas OLTP.
+
+Los sistemas OLTP no son bases de datos exclusivamente relacionales, aunque existen relaciones en los datos. Cada vez es más común que las bases de datos no relacionales apliquen restricciones y permitan transacciones, de modo que estas bases de datos puedan usarse como sistemas OLTP.
+
+Finalmente, las consideraciones de integridad deben manejarse en una base de datos relacional. En el ejemplo, si es necesario eliminar un producto de la tabla de productos, debe haber reglas para garantizar que también se manejen las referencias al producto. Este tipo de reglas se conocen como reglas de integridad y coherencia.
+
+Aplicaciones de OLTP
+
+Introducir pedidos en línea
+Procesamiento de compras
+Almacenamiento de datos del cliente
+Aplicaciones de OLAP
+
+Analizar patrones de compra para hacer recomendaciones.
+Seguimiento de tendencias de compra para publicidad dirigida
+Analizar las tendencias de compra estacionales para asegurarse de que los artículos estén disponibles.
+
+Servicios de bases de datos de AWS
+
+Amazon RDS es la base de datos relacional clásica que utiliza SQL, Oracle, Aurora u otros sistemas de bases de datos similares. Piense en esto como un libro de calificaciones en el que cada estudiante es una fila y todos los estudiantes están adjuntos a la misma cantidad de tareas (columnas). Las empresas pueden utilizar código para buscar datos específicos en función de la información de las filas y columnas. Amazon RDS es útil para empresas que almacenan una cantidad moderada de datos con una estructura uniforme, lo que significa que cada ID único (como el nombre del estudiante) se adjunta a la misma cantidad de puntos de datos (calificaciones).
+
+Amazon RDS se utiliza principalmente para OLTP porque tiene mejores métodos para mantener la integridad y coherencia de la base de datos al procesar datos.
+
+DynamoDB es una base de datos no relacional, lo que significa que no se pueden utilizar sistemas tradicionales como SQL o Aurora. Cada elemento de la base de datos se almacena como un par clave-valor o un archivo de notación de objetos JavaScript (JSON). Esto significa que cada fila puede tener un número diferente de columnas. No es necesario que todas las entradas coincidan de la misma manera. Esto permite una flexibilidad en el procesamiento que funciona bien para blogs, juegos y publicidad.
+
+Aurora es un motor de base de datos relacional diseñado específicamente para funcionar con la nube de AWS. Aurora es hasta cinco veces más rápida que las bases de datos MySQL estándar y tres veces más rápida que las bases de datos PostgreSQL estándar. Está diseñado para proporcionar la seguridad, disponibilidad y confiabilidad de las bases de datos comerciales a una décima parte del costo. Aurora está totalmente administrada por Amazon RDS, que automatiza tareas administrativas que consumen mucho tiempo, como el aprovisionamiento de hardware, la configuración de bases de datos, la aplicación de parches y las copias de seguridad.
+
+Amazon Redshift es un almacén de datos rápido y totalmente administrado que hace que sea eficiente y rentable analizar todos sus datos utilizando SQL estándar y sus herramientas de BI existentes.

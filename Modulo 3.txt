@@ -1,0 +1,94 @@
+Propósito del módulo
+
+En este módulo, aprenderá cómo acceder y navegar hacia algunos de los servicios de Amazon Web Services (AWS) más comunes en la consola. También aprenderá sobre algunas de las aplicaciones del mundo real de estos servicios.
+
+Descripción del módulo
+
+Este módulo incluye una actividad dirigida por un educador para presentarle los servicios principales de AWS. Luego trabajará en la consola de AWS para practicar la navegación a diferentes servicios. Finalmente, completará una actividad de investigación para conocer cómo se utilizan estos servicios en diferentes industrias.
+
+Terminología tecnológica
+
+Para obtener más información sobre la terminología tecnológica utilizada en este módulo, expanda cada una de las siguientes once categorías.
+
+Servicio de almacenamiento simple de Amazon (Amazon S3)
+–
+Un servicio proporcionado por AWS que almacena datos para los usuarios en la nube.
+
+Nube de computación elástica de Amazon (Amazon EC2)
+–
+Un servicio web que proporciona capacidad informática segura y de tamaño variable en la nube. Piense en ello como alquilar una computadora en la nube.
+
+Tienda de bloques elásticos de Amazon (Amazon EBS)
+–
+Almacenamiento para instancias EC2 específicas. Piense en ello como la unidad de almacenamiento para su instancia EC2.
+
+Servicio de base de datos relacional de Amazon (Amazon RDS)
+–
+Esto permite a los desarrolladores crear y administrar bases de datos relacionales en la nube. Piense en una base de datos relacional como un conjunto de datos con relaciones uno a uno. Por ejemplo, una base de datos de transacciones en una tienda departamental relacionaría a cada cliente con sus compras. Amazon RDS permite a los desarrolladores realizar un seguimiento de grandes cantidades de estos datos, organizarlos y buscarlos fácilmente. Las bases de datos relacionales están equipadas con un lenguaje de consulta estructurado (SQL) no procedimental que simplifica las interacciones con la base de datos.
+
+AmazonDynamoDB
+–
+El servicio de base de datos no relacional de AWS. Los datos se almacenan en pares clave-valor.
+
+AWS Lambda
+–
+Lambda le permite ejecutar código sin aprovisionar ni administrar servidores. Paga solo por el tiempo de cálculo que consume; no hay ningún cargo cuando el código no se está ejecutando. Con Lambda, puede ejecutar código para prácticamente cualquier tipo de aplicación o servicio backend, todo sin administración. Cargue su código y Lambda se encargará de todo lo necesario para ejecutarlo y escalarlo con alta disponibilidad. Puede configurar su código para que se inicie automáticamente desde otros servicios de AWS o llamarlo directamente desde cualquier aplicación web o móvil.
+
+Nube privada virtual de Amazon (Amazon VPC)
+–
+Un servicio que proporciona una red virtual dedicada a su cuenta de AWS. Está lógicamente aislado de otras redes virtuales en la nube de AWS. Todos sus servicios de AWS se pueden iniciar desde una VPC. Es útil para proteger sus datos y administrar quién puede acceder a su red.
+
+Gestión de acceso e identidad de AWS (IAM)
+–
+Implica la aplicación de controles a los usuarios que necesitan acceso a recursos informáticos.
+
+AWS CloudTrail
+–
+Supervisa cada acción que se realiza en su cuenta de AWS por motivos de seguridad.
+
+Amazon CloudWatch
+–
+CloudWatch es un servicio de monitoreo para monitorear sus recursos de AWS y las aplicaciones que ejecuta en AWS.
+
+Desplazamiento al rojo del Amazonas
+–
+El servicio de almacenamiento de datos de AWS puede almacenar cantidades masivas de datos de una manera que agiliza las consultas con fines de inteligencia empresarial.
+
+Antecedentes y conceptos erróneos
+
+Este módulo presenta muchos servicios, características y recursos nuevos de AWS. Los siguientes sitios web proporcionan buena información introductoria sobre estos temas:
+
+Descripción general de Amazon VPC (se abre en una nueva pestaña)
+Descripción general de Lambda (se abre en una nueva pestaña)
+Descripción general de Amazon EC2 (se abre en una nueva pestaña)
+Descripción general de Amazon S3 (se abre en una nueva pestaña)
+Descripción general de Amazon EBS (se abre en una nueva pestaña)
+Descripción general de Amazon RDS (se abre en una nueva pestaña)
+Descripción general de DynamoDB (se abre en una nueva pestaña)
+Descripción general de Amazon Redshift (se abre en una nueva pestaña)
+Descripción general de CloudWatch (se abre en una nueva pestaña)
+Descripción general de CloudTrail (se abre en una pestaña nueva)
+Los servicios de AWS Cloud incluyen una gran cantidad de herramientas diferentes que trabajan juntas para cubrir todas las necesidades informáticas de un usuario, completamente en la nube.
+
+Amazon VPC es la red virtual que usted define donde lanza los recursos de AWS. Esta red virtual se parece mucho a una red tradicional que opera en su propio centro de datos, con los beneficios de utilizar la infraestructura escalable de AWS.
+
+Aquí hay algunas diferencias entre los servicios:
+
+Amazon S3 y Amazon EBS son formas de almacenamiento de datos. Hay algunas diferencias clave:
+
+Amazon EBS solo se puede utilizar cuando está conectado a una instancia EC2 y se puede acceder a Amazon S3 por sí solo.
+Amazon EBS no puede almacenar tantos datos como Amazon S3.
+Amazon EBS solo se puede adjuntar a una instancia EC2, mientras que varias instancias EC2 pueden acceder a los datos de un depósito S3.
+Amazon S3 experimenta más retrasos que Amazon EBS al escribir datos.
+
+Amazon RDS, Amazon Redshift y DynamoDB están relacionados con bases de datos, pero existen diferencias:
+
+Amazon RDS es la base de datos relacional clásica que utiliza SQL Server, Oracle Database, Amazon Aurora u otros sistemas de bases de datos similares. Piense en esto como un libro de calificaciones donde cada estudiante es una fila y todos tienen la misma cantidad de tareas (columnas) a las que están adjuntos. Las empresas pueden utilizar código para buscar datos específicos en función de la información de las filas y columnas. Amazon RDS es útil para empresas que almacenan una cantidad moderada de datos con una estructura uniforme, lo que significa que cada ID único, como el nombre del estudiante, se adjunta a la misma cantidad de puntos de datos (calificaciones).
+Amazon Redshift es una base de datos relacional como Amazon RDS, pero está diseñada específicamente para grandes cantidades de datos. Es una herramienta de almacenamiento de datos que es buena para los usuarios que trabajan con big data.
+DynamoDB es una base de datos no relacional, lo que significa que no se pueden utilizar sistemas tradicionales como SQL Server o Aurora. Cada elemento de la base de datos se almacena como un par clave-valor o notación de objetos JavaScript (JSON). Esto significa que cada fila podría tener un número diferente de columnas. No es necesario que todas las entradas coincidan de la misma manera. Esto permite una flexibilidad en el procesamiento que funciona bien para blogs, juegos y publicidad.
+
+CloudTrail y CloudWatch son servicios de monitoreo en la nube, pero realizan funciones diferentes:
+
+CloudTrail monitorea todas las acciones que los usuarios han realizado en una cuenta de AWS determinada. Esto significa que cada vez que alguien carga datos, ejecuta código, crea una instancia EC2, cambia un tipo de unidad S3 o cualquier otra acción que se pueda realizar en AWS, CloudTrail mantendrá un registro de ello. Esto es muy útil por motivos de seguridad para que los administradores puedan saber quién está usando su cuenta y qué está haciendo. Si algo sale mal o surge un problema de seguridad, CloudTrail será la mejor evidencia para descubrir qué sucedió.
+
+CloudWatch monitorea qué están haciendo los diferentes servicios y qué recursos están utilizando. Si CloudTrail es el monitor de personas, CloudWatch es el monitor de servicios. CloudWatch es excelente para asegurarse de que sus servicios en la nube funcionen sin problemas y no utilicen más o menos recursos de los esperados, lo cual es importante para el seguimiento del presupuesto. CloudWatch es excelente para asegurarse de que todos sus diferentes recursos estén funcionando, lo que puede resultar complicado si una gran empresa utiliza cientos de máquinas y unidades diferentes. Se pueden configurar monitores y alarmas a través de CloudWatch para iniciar automáticamente una alerta cuando una métrica alcanza un límite específico.

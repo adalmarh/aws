@@ -1,0 +1,44 @@
+Monitoreo de la nube
+
+Propósito del módulo
+
+El propósito de este módulo es que usted conozca las herramientas que Amazon Web Services (AWS) proporciona para monitorear los servicios en la nube. Estos incluyen AWS Config, AWS CloudTrail y Amazon CloudWatch.
+
+Descripción del módulo
+
+Es importante cuando se opera en la nube realizar un seguimiento de las actividades, porque probablemente haya un costo asociado a cada una. AWS ayuda con el seguimiento, el registro y la generación de informes sobre el uso de sus servicios proporcionando herramientas para hacerlo. Explorará estas herramientas en este módulo.
+
+En el laboratorio, configurará una alerta mediante CloudWatch y supervisará los archivos de registro de CloudTrail. También discutirá los diferentes usos de CloudTrail y CloudWatch. Por último, determinará qué servicios son mejores para un escenario determinado.
+
+Terminología tecnológica
+
+Para obtener más información sobre la terminología tecnológica utilizada en este módulo, amplíe cada una de las siguientes cuatro categorías.
+
+Amazon CloudWatch
+–
+Un servicio de monitoreo para monitorear sus recursos de AWS y las aplicaciones que ejecuta en AWS
+
+AWS CloudTrail
+–
+Un servicio para monitorear y registrar cada acción que se realiza en su cuenta de AWS por motivos de seguridad.
+
+Configuración de AWS
+–
+Un servicio que le permite evaluar, auditar y evaluar las configuraciones de sus recursos de AWS
+
+Servicio de notificación simple de Amazon (Amazon SNS)
+–
+Una herramienta de AWS que le permite enviar textos, correos electrónicos y mensajes a otros servicios en la nube y enviar notificaciones de diversas formas desde la nube al cliente.
+
+Antecedentes y conceptos erróneos
+
+AWS proporciona muchos servicios interconectados que proporcionan una base compleja para realizar tareas en la nube. A medida que las empresas crecen, pueden ejecutar varias cuentas de AWS interconectadas. Cada cuenta puede ejecutar docenas de instancias que procesan miles de gigabytes de datos, sirviendo a millones de personas y representando miles de millones de dólares. No importa el tamaño de una empresa, es esencial monitorear y rastrear sus servicios en la nube. Esto le ayuda a garantizar que todos los activos de la nube funcionen sin problemas y a estar atento si ocurre algo fuera de lo normal.
+
+AWS proporciona herramientas poderosas para monitorear todos los servicios en la nube. Estas herramientas trabajan juntas para proporcionar un conjunto de servicios que brindan conocimientos a los usuarios de la nube.
+
+CloudWatch es un servicio de monitoreo para monitorear sus recursos de AWS y las aplicaciones que ejecuta en AWS.
+CloudTrail y CloudWatch son servicios de monitoreo de la nube, pero realizan funciones diferentes:
+
+CloudTrail monitorea y registra todas las acciones que los usuarios han realizado en una cuenta de AWS determinada. Esto significa que CloudTrail registra cada vez que alguien carga datos, ejecuta código, crea una instancia de Amazon Elastic Compute Cloud (Amazon EC2) o realiza cualquier otra acción.
+CloudWatch monitorea qué están haciendo los diferentes servicios y qué recursos están utilizando. CloudTrail registra las actividades, mientras que CloudWatch las monitorea. CloudWatch le ayuda a asegurarse de que sus servicios en la nube funcionen sin problemas. Los servicios también pueden ayudarle a no utilizar más o menos recursos de los esperados, lo cual es importante para el seguimiento del presupuesto.
+AWS Config es un servicio que le permite evaluar, auditar y evaluar las configuraciones de sus recursos de AWS. AWS Config monitorea y registra continuamente sus configuraciones de recursos de AWS y le permite automatizar la evaluación de las configuraciones registradas con respecto a las configuraciones deseadas.

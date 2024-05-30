@@ -1,0 +1,65 @@
+Almacenamiento virtual
+
+Propósito del módulo
+
+En este módulo, recibirá una descripción general de Amazon Elastic Block Store (Amazon EBS). Comparará Amazon EBS y Amazon Simple Storage Service (Amazon S3). Los estudiantes aprenderán sobre los diferentes niveles de almacenamiento y cómo elegir el mejor tipo de almacenamiento para un escenario determinado.
+
+Descripción del módulo
+
+Analizará los beneficios y características de Amazon EBS. Luego analizarás estudios de casos del mundo real relacionados con Amazon EBS. Finalmente, creará sus propios volúmenes de EBS y los adjuntará a una instancia de Amazon Elastic Compute Cloud (Amazon EC2).
+
+Terminología tecnológica
+
+Para obtener más información sobre la terminología tecnológica utilizada en este módulo, expanda cada una de las siguientes cinco categorías.
+
+Tienda de bloques elásticos de Amazon (Amazon EBS)
+–
+Almacenamiento para instancias específicas de Amazon Elastic Compute Cloud (Amazon EC2). Piense en ello como la unidad de almacenamiento para su instancia EC2.
+
+Nube de computación elástica de Amazon (Amazon EC2)
+–
+Un servicio web que proporciona capacidad informática segura y de tamaño variable en la nube. Piense en ello como alquilar una computadora en la nube.
+
+Unidad de disco duro (HDD)
+–
+Almacenamiento más lento que utiliza un disco giratorio para almacenar datos
+
+Operaciones de entrada/salida por segundo (IOPS)
+–
+Una medida de rendimiento común que se utiliza para comparar dispositivos de almacenamiento de computadoras, como unidades de disco duro (HDD) y unidades de estado sólido (SSD).
+
+Unidad de estado sólido (SSD)
+–
+Almacenamiento muy rápido que utiliza memoria flash en lugar de un disco giratorio
+Antecedentes y conceptos erróneos
+
+Amazon EBS es un almacenamiento para instancias EC2 con importantes beneficios:
+
+Disponibilidad de datos
+Persistencia de datos
+Cifrado de datos
+Instantáneas
+El almacenamiento de Amazon EBS se implementa como una serie de bloques de longitud fija que el sistema operativo puede leer y escribir. No hay nada almacenado sobre lo que representan estos bloques o sus atributos. Los bloques son muy parecidos a los sistemas de archivos New Technology File System (NTFS) o File Allocation Table (FAT) que se ejecutan en su PC o Mac. Esto significa que se puede acceder a ellos rápidamente.
+
+El almacenamiento de Amazon S3 se implementa como un objeto que la aplicación que utiliza el objeto debe leer y escribir. Los objetos contienen metadatos: datos sobre los atributos del objeto que ayudan al sistema a catalogarlo e identificarlo. Ejemplos de objetos son imágenes, vídeos y música. Los objetos no se pueden procesar de forma incremental. Deben leerse y escribirse en su totalidad. Esto puede tener implicaciones de rendimiento y coherencia.
+
+Existen otras diferencias entre el almacenamiento de Amazon S3 y Amazon EBS, incluidas diferencias en costo, rendimiento y rendimiento. Estas diferencias se analizan en la página web de Cloud Storage en AWS (se abre en una pestaña nueva). Depende del usuario o del diseñador de la aplicación decidir si el almacenamiento de Amazon S3 o Amazon EBS es más apropiado para una aplicación determinada.
+
+Hay dos tipos principales de volúmenes de EBS y cada tipo principal tiene dos subtipos. Cada tipo tiene ventajas e inconvenientes, por lo que es importante elegir el tipo que mejor se adapte al trabajo para el que lo utilizará.
+
+Puede encontrar más información sobre los tipos de volúmenes de EBS en la página web de AWS, Tipos de volúmenes de Amazon EBS (se abre en una nueva pestaña).
+
+Aquí hay varias diferencias clave más entre el almacenamiento de datos de Amazon S3 y Amazon EBS:
+
+Amazon EBS solo se puede utilizar cuando está conectado a una instancia EC2. Por el contrario, se puede acceder a Amazon S3 por sí solo mediante protocolos de Protocolo de transferencia de hipertexto (HTTP).
+Amazon EBS no puede almacenar tantos datos como Amazon S3.
+Amazon EBS solo se puede adjuntar a una instancia EC2, mientras que varias instancias EC2 pueden acceder a los datos de un depósito S3.
+Amazon S3 experimenta más retrasos que Amazon EBS al escribir datos.
+Los volúmenes de EBS se cifran en su totalidad, mientras que los objetos de Amazon S3 se cifran individualmente mediante cifrado del lado del servidor (SSE).
+Amazon EBS incluye tres tipos de volúmenes, mientras que Amazon S3 incluye más tipos:
+Estándar S3
+S3 Estándar-Acceso poco frecuente (S3 Estándar-IA)
+S3 Una Zona-Acceso poco frecuente (S3 Una Zona-IA)
+Niveles inteligentes de S3
+Glaciar S3
+Archivo profundo del glaciar S3

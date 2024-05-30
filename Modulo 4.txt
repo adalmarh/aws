@@ -1,0 +1,79 @@
+Propósito del módulo
+
+En este módulo, aprenderá cómo crear una instancia de Amazon Elastic Compute Cloud (Amazon EC2) y utilizarla para alojar un sitio web. También aprenderá el propósito de las claves de acceso, el Sistema de nombres de dominio (DNS), Amazon Route 53 y las nubes privadas virtuales.
+
+Descripción del módulo
+
+Las actividades de este módulo incluyen trabajo práctico para crear una instancia EC2, adjuntar una clave de acceso, acceder a la instancia mediante la consola de comandos y crear un sitio web sencillo y alojarlo en la instancia EC2 mediante Amazon Simple Storage Service (Amazon S3). balde.
+
+Terminología tecnológica
+
+Para obtener más información sobre la terminología tecnológica utilizada en este módulo, expanda cada una de las siguientes once categorías.
+
+Nube de computación elástica de Amazon (Amazon EC2)
+–
+Un servicio web que proporciona capacidad informática segura y de tamaño variable en la nube. Piense en ello como alquilar una computadora en la nube.
+
+Servicio de almacenamiento simple de Amazon (Amazon S3)
+–
+Un servicio proporcionado por Amazon Web Services (AWS) que almacena datos para los usuarios en la nube.
+
+Sistema de nombres de dominio (DNS)
+–
+Un sistema de nombres para computadoras, dispositivos y recursos conectados a una red.
+
+cubo S3
+–
+Un contenedor de objetos (como imágenes, archivos de audio, archivos de vídeo, documentos, etc.) en Amazon S3
+
+Política
+–
+Un objeto en AWS que, cuando se asocia con una identidad o un recurso, define sus permisos. AWS evalúa estas políticas cuando una entidad principal (usuario o rol) realiza una solicitud.
+
+Nombre de dominio
+–
+Etiqueta que identifica una red de computadoras bajo control centralizado.
+
+Ruta Amazónica 53
+–
+El servicio web DNS de AWS
+
+Nube privada virtual (VPC)
+–
+Una red virtual dedicada a su cuenta de AWS. Está lógicamente aislado de otras redes virtuales en la nube de AWS. Todos sus servicios de AWS se pueden iniciar desde una VPC. Es útil para proteger sus datos y administrar quién puede acceder a su red.
+
+Notación de objetos JavaScript (JSON)
+–
+Una sintaxis para almacenar e intercambiar datos.
+
+sitio web dinámico
+–
+Un sitio web que cambia según las interacciones del usuario; a menudo se construye utilizando Python, JavaScript, PHP o ASP con lenguaje de marcado de hipertexto (HTML).
+
+sitio web estático
+–
+Un sitio web que no cambia según las interacciones del usuario; normalmente se construye utilizando HTML y hojas de estilo en cascada (CSS).
+
+Antecedentes y conceptos erróneos
+
+Amazon EC2 es uno de los servicios en la nube de AWS más básicos y utilizados. Fundamentalmente, proporciona a los usuarios potencia informática en la nube que se puede utilizar para completar tareas: cualquier cosa, desde aprendizaje automático hasta ejecutar aplicaciones, consultar bases de datos y transmitir vídeo.
+
+Hay dos tipos de sitios web: estáticos y dinámicos. Los sitios web estáticos no requieren que se realicen acciones en el servidor. Los sitios web dinámicos requieren interacciones con el servidor para responder a las solicitudes realizadas en las máquinas cliente. En este módulo, necesitará crear un depósito S3, que es como una carpeta, para almacenar su sitio web estático. Harás público tu depósito para que cualquiera pueda ver el contenido. Esto tiene sentido para un sitio web público, pero querrás considerar los controles de privacidad para diferentes tipos de datos. Por ejemplo, si está almacenando un diario privado en la nube, no querrá darle acceso público.
+
+El objeto que controla la seguridad y los permisos de acceso en AWS se llama política. Las políticas están escritas en un lenguaje de programación llamado JSON. No es necesario saber cómo escribir JSON para este módulo; copiarás y pegarás el código directamente. Debes tener en cuenta que JSON es el lenguaje de programación utilizado para las políticas de AWS y funciona permitiendo o denegando acciones o permisos.
+
+Utilizará un editor de texto como el Bloc de notas para crear un archivo index.html que servirá como código para su sitio web. De manera similar a la política de depósito, no necesita conocer el código HTML porque tendrá que copiar y pegar. Si tiene experiencia con HTML, puede agregar código para personalizar su sitio web.
+
+Para registrar un nombre de dominio para su sitio web, puede utilizar Route 53. Registrar un nombre de dominio costará dinero, por lo que será opcional, pero aún puede navegar hasta el servicio para ver cómo funciona.
+
+También iniciará una instancia EC2 que luego podrá usar como servidor para alojar su sitio web dinámico.
+
+En general, se recomienda que los usuarios creen instancias EC2 y depósitos S3 dentro de una VPC. La VPC es una red privada a través de la cual se accederá a los depósitos S3 o instancias EC2. El uso de una VPC le permite controlar estrictamente quién tiene acceso a sus recursos y desde dónde pueden obtener acceso. Las VPC se pueden dividir en subredes para brindar un control aún más granular sobre el acceso y la seguridad. Una VPC se basa en una región.
+
+Por accesibilidad
+–
+Este diagrama muestra una VPC en una región de la nube de AWS. La VPC contiene dos subredes y cada subred se encuentra en una zona de disponibilidad diferente dentro de la región. Cada subred contiene una instancia EC2.
+
+Por accesibilidad
+–
+Este diagrama muestra una instancia EC2 dentro de una VPC. La instancia EC2 está conectada a un enrutador que se encuentra fuera de la VPC pero dentro de AWS. El enrutador también está conectado a una puerta de enlace de Internet, que se encuentra en el límite entre AWS e Internet. Esta puerta de enlace de Internet está conectada a otras computadoras que se encuentran fuera del entorno de AWS.

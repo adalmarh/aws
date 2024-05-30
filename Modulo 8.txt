@@ -1,0 +1,63 @@
+Seguridad II
+
+Propósito del módulo
+
+El propósito de este módulo es continuar desarrollando su comprensión de la seguridad en la nube. El módulo cubre las diferencias entre AWS Shield y AWS WAF. Aprenderá qué es un ataque de denegación de servicio distribuido (DDoS). También aprenderá sobre Amazon Inspector y AWS Artifact.
+
+Descripción del módulo
+
+En este módulo, se le presentarán escenarios relacionados con la nube de AWS. También determinará si se siguen las mejores prácticas de seguridad y recomendará pasos para corregir cualquier falla de seguridad.
+
+Terminología tecnológica
+
+Para obtener más información sobre la terminología tecnológica utilizada en este módulo, amplíe cada una de las siguientes cinco categorías.
+
+Escudo AWS
+–
+Un servicio de protección DDoS administrado que protege las aplicaciones que se ejecutan en Amazon Web Services (AWS).
+
+WAF de AWS
+–
+Un servicio que le brinda control sobre qué tráfico permitir o bloquear en sus aplicaciones web mediante la definición de reglas de seguridad web personalizables.
+
+Denegación de servicio distribuida (DDoS)
+–
+Un intento malicioso de hacer que un sistema específico, como un sitio web o una aplicación, no esté disponible para los usuarios finales. Para lograr esto, los atacantes utilizan una variedad de técnicas que consumen la red u otros recursos, interrumpiendo el acceso de los usuarios finales legítimos.
+
+Inspector de Amazon
+–
+Un servicio automatizado de evaluación de seguridad. Le ayuda a probar la accesibilidad de la red de sus instancias de Amazon Elastic Compute Cloud (Amazon EC2) y el estado de seguridad de sus aplicaciones que se ejecutan en las instancias.
+
+Artefacto de AWS
+–
+Un recurso central para información relacionada con el cumplimiento. Proporciona acceso bajo demanda a informes de cumplimiento y seguridad de AWS y a acuerdos en línea seleccionados.
+
+Antecedentes y conceptos erróneos
+
+Se deben abordar cuatro áreas de seguridad para la computación en la nube:
+
+Datos: Proteger la información que se almacena y procesa en la nube
+Permisos: Regular quién tiene acceso a los recursos y datos en la nube
+Infraestructura: proteger las máquinas y el hardware que ejecutan, almacenan y procesan datos en la nube
+Evaluación: inspeccionar la infraestructura, los permisos y los datos para asegurarse de que estén seguros.
+En este módulo, abordaremos la infraestructura y la evaluación.
+
+Shield y AWS WAF son servicios que abordan ataques a la infraestructura, principalmente a la red utilizada para acceder a los recursos de la nube.
+Amazon Inspector aborda la evaluación investigando qué tan bien están protegidos los recursos de la nube que utilizamos, como nuestras instancias EC2. También investiga si estos recursos siguen las pautas de mejores prácticas.
+La naturaleza de la nube la hace susceptible a ciberataques que pueden hacer que los sitios web, las aplicaciones y los procesos dejen de funcionar. Cuando una empresa multimillonaria como Amazon confía en la nube, necesita saber que está protegida contra ataques.
+
+Un tipo importante de ciberataque se llama DDoS. Un DDoS ocurre cuando los atacantes configuran programas que envían miles o millones de solicitudes a una aplicación, sitio web o servicio al mismo tiempo. Este aumento en el tráfico puede consumir recursos hasta el punto en que el sitio web o la aplicación ya no sean accesibles para usuarios legítimos.
+
+Los ataques DDoS se pueden realizar por muchas razones, incluida la competencia, la motivación política o la motivación económica. Cualquiera sea el motivo, AWS cuenta con servicios que minimizan estas amenazas para los usuarios de la nube.
+
+Shield funciona junto con Elastic Load Balancing, Amazon CloudFront y Amazon Route 53 para proteger contra ataques DDoS. Hay dos niveles de servicio:
+AWS Shield Standard está disponible para todos los usuarios de AWS sin costo adicional. Protege a los usuarios de los ataques DDoS más comunes. Esta protección se aplica de forma automática y transparente a cualquier recurso ELB, distribuciones de CloudFront y recursos de Route 53.
+AWS Shield Advanced proporciona capacidad adicional de mitigación de DDoS para ataques volumétricos, detección inteligente de ataques y mitigación de ataques en las capas de aplicación y red. Los usuarios obtienen acceso las 24 horas del día, los 7 días de la semana al equipo de respuesta DDoS (DRT) para una mitigación personalizada durante los ataques. Los usuarios también obtienen métricas e informes avanzados en tiempo real, y protección de costos DDoS para protegerse contra aumentos en las facturas después de un ataque DDoS. Shield Advanced está disponible por un costo adicional.
+AWS WAF es otra herramienta defensiva proporcionada por AWS. Ayuda a proteger las aplicaciones web de exploits que podrían afectar la disponibilidad o la seguridad o consumir recursos. AWS WAF puede monitorear el tráfico web de una aplicación y decidir qué tráfico dejar pasar en función de la solicitud específica que se realiza. Los usuarios de AWS pueden crear su propio conjunto de reglas para dirigir el tráfico permitido por AWS WAF a direcciones IP específicas.
+
+Amazon Inspector no protege activamente sus servicios de AWS. En cambio, monitorea los servicios y le brinda actualizaciones sobre cualquier vulnerabilidad o cualquier lugar donde no esté siguiendo las mejores prácticas. Esto puede resultar útil para que los expertos se aseguren de que cumplen con los estándares de cumplimiento de seguridad y para los nuevos usuarios que pueden aprender sobre las mejores prácticas.
+Amazon Inspector funciona ejecutando una evaluación de sus instancias EC2; La evaluación comprueba varias mejores prácticas predeterminadas. Después de realizar una evaluación, Amazon Inspector genera una lista detallada de hallazgos de seguridad priorizados por nivel de gravedad. Estos hallazgos se pueden revisar directamente o como parte de informes de evaluación detallados que están disponibles a través de la consola o API de Amazon Inspector.
+
+Las evaluaciones de seguridad de Amazon Inspector lo ayudan a verificar la accesibilidad de red no deseada de sus instancias EC2 y las vulnerabilidades en esas instancias EC2. Las evaluaciones de Amazon Inspector se ofrecen como paquetes de reglas predefinidas asignadas a las mejores prácticas de seguridad y definiciones de vulnerabilidad comunes. Ejemplos de reglas integradas incluyen verificar el acceso a sus instancias EC2 desde Internet, activar el inicio de sesión raíz remoto o instalar versiones de software vulnerables. Los investigadores de seguridad de AWS actualizan periódicamente estas reglas.
+
+AWS Artifact es un recurso centralizado para información relacionada con el cumplimiento. Diferentes organizaciones requieren que los proveedores de servicios en la nube (CSP) cumplan con muchas certificaciones y reglas diferentes para alojar sus datos o procesar solicitudes. Las organizaciones que manejan datos confidenciales, como información bancaria, información personal o registros médicos, deben asegurarse de que su servicio en la nube cumpla con ciertos estándares de seguridad. AWS Artifact enumera y brinda detalles sobre los diferentes estándares de cumplimiento que cumplen.
